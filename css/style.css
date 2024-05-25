@@ -1,0 +1,79 @@
+body{
+    background-color: #F7ECDE;
+}
+h1{
+    font-family: 'Pacifico';
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+}
+
+.container h1 {
+    position: relative;
+    display: inline-block;
+}
+
+.container h1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: #FEC260;
+    z-index: -1;
+    transition: height 0.3s ease;
+}
+
+.container h1:hover::before {
+    height: 65%;
+}
+
+.separator {
+    position: relative;
+    height: 2px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.separator::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    border-top: 2px dotted #000;
+    width: 100%;
+}
+
+.title{
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    font-weight: 500;
+    background-image:linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#bookmarkName.form-control:focus, #bookmarkURL.form-control:focus {
+    border-color: #FBC39E !important;
+    box-shadow: 0 0 10px #FBC39E !important;
+    outline: none !important;
+}
+#submitBtn{
+    background-color: #D1512D;
+    color: white;
+}
+#submitBtn:hover{
+    background-color: rgb(196, 70, 70);
+}
+
+#visitBtn a {
+    color: black;
+    text-decoration: none;
+}
+
+#alertMessage{
+    color: black;
+    text-align: center;
+}
